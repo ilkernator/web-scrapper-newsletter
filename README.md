@@ -1,4 +1,4 @@
-# web-scrapper-newsletter
+# web-scraper-newsletter
 What is this about? In short: Scrapping music concert data from a web page and sending the content to email subscribers.
 This is, however, only a little (first) side project that is limited to scrapping data from the German webpage www.livegigs.de with preset search filters (venue range, music genre, ...). Though, other websites are of course also conceivable, the code is only intended to show in a simple way how such a project could be put into practice. The result of the web-scrap is being transformed to a DataFrame, which then will be sent to email recipients.
 
