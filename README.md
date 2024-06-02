@@ -18,5 +18,18 @@ I recommend to use a [virtual environment](https://docs.python.org/3/library/ven
 
 `pip install -r requirements.txt`
 
+Further, create a YAML file on root level that holds the email adress of the people receiving the newsletter (e.g. I called it 'recipient_email_config.yml'). Also make sure to create a .gitignore so you can untrack the following files
+- recipient_email_config* (or whatever you would call that file)
+- .*
+- log_files
+
+Lastly, create a .env file that holds the following secret variables
+```
+email_sender=<The Email-Adress of the Account sending out the newsletter>
+email_sender_pw=<The Password to that Account>
+name_sender=<The name of the person sending out the email. This is for the body of the message>
+```
+
 And that's it! You are ready to go.
 
+Note: As of this version, I am using Python 3.10.14
