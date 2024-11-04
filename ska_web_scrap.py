@@ -70,13 +70,12 @@ def send_mail(send_to:list) -> None:
             multipart["To"] = receiver
             multipart["Subject"] = subject  
             multipart.attach(MIMEText(message, "html"))
-            server = smtplib.SMTP('smtp-mail.outlook.com',587) 
-            type(server) 
+            server = smtplib.SMTP('smtp.gmail.com',587) 
             server.ehlo()
             server.starttls()
             server.login(multipart["From"], sender_email_pw)
             server.sendmail(multipart["From"], multipart["To"], multipart.as_string())
-            server.quit()
+            server.close()
 
         log_file.touch(exist_ok=True)
         
