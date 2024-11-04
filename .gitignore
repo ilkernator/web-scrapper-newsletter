@@ -1,0 +1,5 @@
+recipient_email_config*
+.venv
+.env
+.DS*
+log_files
